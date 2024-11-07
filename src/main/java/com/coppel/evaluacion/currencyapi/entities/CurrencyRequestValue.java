@@ -7,6 +7,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
@@ -19,9 +20,11 @@ public class CurrencyRequestValue {
     private Long id;
 
     @ManyToOne
+    @JoinColumn(name = "request_id")
     private CurrencyRequest currencyRequest;
     
     @ManyToOne
+    @JoinColumn(name = "currency_id")
     private Currency currency;
 
     @Column(precision = 18, scale = 10)  // Correspondiente a DECIMAL(18, 10)
@@ -69,6 +72,11 @@ public class CurrencyRequestValue {
         this.value = value;
     }
 
+    @Override
+    public String toString() {
+        return "CurrencyRequestValue [currencyRequest=" + currencyRequest + ", currency=" + currency
+                + ", value=" + value + "]";
+    }
     
 
 }
