@@ -19,7 +19,7 @@ public class CurrencyRequest {
     private String status;
     
     @Column(name = "last_updated_at")
-    private LocalDateTime lastUpdateAt;
+    private LocalDateTime lastUpdatedAt;
     
     @Column(name = "response_time")
     private float responseTime;
@@ -28,18 +28,18 @@ public class CurrencyRequest {
     private LocalDateTime createdAt;
     
     @Column(name = "updated_at")
-    private LocalDateTime updateAt;
+    private LocalDateTime updatedAt;
 
     public CurrencyRequest() {
     }
-    public CurrencyRequest(Long id, String status, LocalDateTime lastUpdateAt, float responseTime,
-            LocalDateTime createdAt, LocalDateTime updateAt) {
+    public CurrencyRequest(Long id, String status, LocalDateTime lastUpdatedAt, float responseTime,
+            LocalDateTime createdAt, LocalDateTime updatedAt) {
         this.id = id;
         this.status = status;
-        this.lastUpdateAt = lastUpdateAt;
+        this.lastUpdatedAt = lastUpdatedAt;
         this.responseTime = responseTime;
         this.createdAt = createdAt;
-        this.updateAt = updateAt;
+        this.updatedAt = updatedAt;
     }
     public Long getId() {
         return id;
@@ -53,11 +53,11 @@ public class CurrencyRequest {
     public void setStatus(String status) {
         this.status = status;
     }
-    public LocalDateTime getLastUpdateAt() {
-        return lastUpdateAt;
+    public LocalDateTime getLastUpdatedAt() {
+        return lastUpdatedAt;
     }
-    public void setLastUpdateAt(LocalDateTime lastUpdateAt) {
-        this.lastUpdateAt = lastUpdateAt;
+    public void setLastUpdatedAt(LocalDateTime lastUpdatedAt) {
+        this.lastUpdatedAt = lastUpdatedAt;
     }
     public float getResponseTime() {
         return responseTime;
@@ -71,11 +71,11 @@ public class CurrencyRequest {
     public void setCreatedAt(LocalDateTime createdAt) {
         this.createdAt = createdAt;
     }
-    public LocalDateTime getUpdateAt() {
-        return updateAt;
+    public LocalDateTime getUpdatedAt() {
+        return updatedAt;
     }
-    public void setUpdateAt(LocalDateTime updateAt) {
-        this.updateAt = updateAt;
+    public void setUpdatedAt(LocalDateTime updatedAt) {
+        this.updatedAt = updatedAt;
     }
 
     
