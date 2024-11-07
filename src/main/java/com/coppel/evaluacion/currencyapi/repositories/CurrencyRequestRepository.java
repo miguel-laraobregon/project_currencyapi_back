@@ -6,4 +6,7 @@ import com.coppel.evaluacion.currencyapi.entities.CurrencyRequest;
 
 public interface CurrencyRequestRepository extends JpaRepository<CurrencyRequest, Long> {
 
+    CurrencyRequest findTop1ByOrderByCreatedAtDesc();
+
+    CurrencyRequest findTop1ByOrderByCreatedAtAsc();
 }
