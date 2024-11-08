@@ -1,7 +1,6 @@
 package com.coppel.evaluacion.currencyapi.controllers;
 
 import java.util.List;
-import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,7 +32,7 @@ public class CurrencyController {
     private CurrencyRequestValueService currencyRequestValueService;
 
     @GetMapping
-    public ResponseEntity<Object> getCurrencies(){
+    public ResponseEntity<Object> getCurrenciesCode(){
 
         List<Currency> result = currencyService.getCurrencies();
 
@@ -47,7 +46,7 @@ public class CurrencyController {
 
 
     @GetMapping("/{currencyCode}")
-    public ResponseEntity<Object> getCurrencies( @PathVariable String currencyCode,  @RequestParam(required = false) String finit,  @RequestParam(required = false) String fend, @RequestParam(defaultValue = "0") int page, @RequestParam(defaultValue = "10") int size){
+    public ResponseEntity<Object> getCurrenciesValues( @PathVariable String currencyCode,  @RequestParam(required = false) String finit,  @RequestParam(required = false) String fend, @RequestParam(defaultValue = "0") int page, @RequestParam(defaultValue = "10") int size){
 
         try {
             Page <CurrencyRequestValue> result = currencyRequestValueService.getCurrencyRequestValues(currencyCode, finit, fend, page, size);
