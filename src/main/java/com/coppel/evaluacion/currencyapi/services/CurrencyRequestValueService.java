@@ -33,7 +33,7 @@ public class CurrencyRequestValueService {
 
         // Validamos valor de currencyCode
         if (currencyCode.length() != 3) {
-            throw new IllegalArgumentException("El clave de divisa debe ser de 3 caracteres");
+            throw new IllegalArgumentException("La clave de divisa debe ser de 3 caracteres");
         }
 
         // validamos que el valor de currencyCode exista en el catalogo de currencies
