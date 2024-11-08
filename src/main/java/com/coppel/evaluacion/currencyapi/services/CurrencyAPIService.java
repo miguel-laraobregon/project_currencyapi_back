@@ -28,7 +28,8 @@ import com.coppel.evaluacion.currencyapi.repositories.CurrencyRequestValueReposi
 @Service
 public class CurrencyAPIService {
 
-    private String apiUrl = "https://api.currencyapi.com/v3/latest" ;
+    @Value("${currencyapi.url}")
+    private String apiUrl;
 
     @Value("${currencyapi.apikey}")
     private String apiKey;
